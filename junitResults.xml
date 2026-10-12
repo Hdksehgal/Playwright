@@ -1,0 +1,11 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="1.540616">
+<testsuite name="19APItesting.spec.js" timestamp="2026-10-05T09:22:10.724Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.627" errors="0">
+<testcase name="GET request" classname="19APItesting.spec.js" time="0.627">
+<system-out>
+<![CDATA[[object Object]
+200
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

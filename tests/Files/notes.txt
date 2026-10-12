@@ -1,0 +1,1147 @@
+Selenium :
+=========
+--  Selenium is a powerful open-source framework that enables automated testing of web applications across multiple browsers and platforms
+-- to automate repetitive tasks, test web applications, and ensure their functionality across different browsers and platforms.
+--  With Selenium framework, manual testing efforts are minimized,testers are able to deliver test cycles faster by automating repeated test cases.
+--  Selenese is the language used to write selenium commands
+
+Component:
+1. Selenium IDE
+2. Selenium RC
+3. Selenium Grid
+4. Selenium WebDriver
+
+Webdriver  - I   (Chromedriver and others -C  )
+================================================
+-- Selenium WebDriver is a web framework that permits you to execute cross-browser tests. This tool is used for automating web-based application testing to verify that it performs expectedly.
+
+Selenium WebDriver allows you to choose a programming language to create test scripts
+
+
+Benefits of Selenium WebDriver:
+==============================
+* It is one of the most popular Open-Source tools and is easy to get started with for testing web-based applications. It also allows you to perform cross browser compatibility testing.
+* Supports multiple operating systems like Windows, Mac, Linux, Unix, etc.
+* It provides compatibility with a range of languages, including Python, Java, Perl, Ruby, etc.
+* Provides support for modern browsers like Chrome, Firefox, Safari, and Internet Explorer.
+* Selenium WebDriver completes the execution of test scripts faster when compared to other tools
+* More Concise API (Application Programming interface) than Selenium RC’s
+* It also provides compatibility with iPhoneDriver, HtmlUnitDriver, and AndroidDriver
+* Selenium supports parallel test execution.
+* Selenium can be integrated with TestNG and JUnit to generate test reports and manage test cases.
+* Selenium can be integrated with Jenkins, Docker, and Maven to attain continuous testing. 
+
+Drawbacks :
+===========
+* Selenium can test only web applications. It cannot test desktop applications. 
+* Selenium cannot access the web elements outside the web applications that are under test.
+* No guaranteed user support is available. 
+
+--------------------------------------------------------------------------------------------------------------------
+
+Selenese is the language used to write Selenium Commands. These Selenese commands are then used to test web-applications. Based on the HTML tags of the UI elements, one can check their existence. Commands help Selenium understand what actions or operations to perform.
+
+Selenium commands are mainly categorized into three types:
+
+1. Actions – Commands that are used or Help to manipulate or change the state of applications ,  (e.g. click on some link or select an option from a page).
+
+2. Accessors – They are used to evaluate the application state & store results in a variable 
+
+3. Assertions – Help compare expected and actual results. They act like checkpoints and if both the values are equal, only then the test case passes or else it fails.Assertions help verify whether the state of the application after executing the test case conforms to the desired state (e.g. VerifyText, waitForPageToLoad). Assertions have three modes:
+Assert
+Verify
+WaitFor
+
+--------------------------------------------------------------------------------------------------------------
+
+Selenium:
+=========
+It is a popular open-source software testing framework used for automating web applications & test web applications across multiple browsers. It's primarily built in Java and supports several browsers and programming languages. 
+. It is widely used for functional testing, regression testing, and performance testing. Selenium supports multiple programming languages, including Java, C#, Python, and Ruby
+
+
+The Selenium test suite comprises of four tools:
+
+Selenium Integrated Development Environment (IDE)
+Selenium Remote Control (RC)
+Selenium WebDriver 
+Selenium Grid
+
+Selenium IDE: 
+Selenium Integrated Development Environment (IDE) is a browser extension for Firefox and Chrome that generates tests quickly through its record and playback functionality. The IDE records the user actions on the browser and exports them as a reusable script in different languages such as Java, C# and JavaScript.
+
+Selenium Grid: It is a tool that is used for concurrent execution of test cases on different browsers, machines, and operating systems simultaneously. It allows parallel test execution making it faster to run large test suites.
+
+Selenium RC: It is no longer used. It is being replaced by Selenium Webdriver due to its complex architecture and limitations. It allows you to develop responsive design tests in any scripting language of your choice. Server and client libraries are the two main components of Selenium RC.
+
+Selenium WebDriver is the core component of Selenium which provides a programming interface for driving the web browsers. It allows to write tests in different programming languages to interact with the web elements, simulate user interactions and perform assertions.
+
+1. Open Source
+2. Multiple Languages Support: WebDriver also supports most of the commonly used programming languages like Java, C#, JavaScript, PHP, Ruby, Pearl and Python.
+3. Selenium WebDriver supports multiple OS like Linux, UNIX, Mac as well as Windows.
+4. Multiple Browser Support: Selenium WebDriver supports a diverse range of web browsers such as Firefox, Chrome, Internet Explorer, Opera and many more.
+5. Supports Multiple Frameworks and Languages -- WebDriver can be integrated with various frameworks like Maven or ANT for compiling the source code. For application testing and reporting, it can also be integrated with testing frameworks like TestNG to ease automation testing with Selenium WebDriver. It can even integrate with Jenkins for Continuous Integration or Continuous Delivery automated build and deployment.
+6. Cross-Device Testing -- Support across multiple devices is another major benefits of automation testing with Selenium WebDriver. Automated test cases can now be written for testing on iPhones, Blackberry, and Android
+
+---------------------------------------------------------------------------------------------
+
+webdriver  - I   (chromedriver and others -C  )
+
+selenium jar files (client & web driver bindings)
+
+	1. Create a new project in Eclipse?
+	2. Create a new package under the project?
+	3. And, create a new class under the package?
+	4. How to Add  Selenium WebDriver Jars to the project?
+
+
+Maximize browser window using Selenium Webdriver  ---  manage() method
+			driver.manage().window().maximize();
+
+
+Maven , add maven dependencies (POM.xml) (like selenium java jar file)
+
+
+simple script (setProperty --m,webdriver,driver)      1. Setting the driver path
+steps to Instantiate WebDriver			      2. Creating WebDriver instance( initilizing the driver)
+						      3. Navigate to web page ( launched )
+
+By  -- c
+
+WebDriver driver = new FirefoxDriver(); (Firefox browser )
+WebDriver driver = new ChromeDriver(); (Chrome browser)
+
+ChromeDriver driver = new ChromeDriver(); (Chrome browser)
+
+Maximize browser window using Selenium Webdriver  ---  manage() method
+			driver.manage().window().maximize();
+
+----------------------------------------------------------------------------------------------------
+
+Setting up WebDriver in Selenium
+=================================
+
+
+simple script (setProperty --m,webdriver,driver)      1. Setting the driver path
+steps to Instantiate WebDriver			      2. Creating WebDriver instance( initializing the driver)
+						      3. Navigate to web page ( launched )
+
+1. To set Driver path in Selenium use:
+ 
+ a) System.setProperty(“driver-name”,”driver-path”); - in this global level property is set to check the path for drivers. 
+
+ b) WebDriverManager - WebDriverManager is a class in Selenium used to automate the handling of driver executables like chromedriver.exe, edgedriver.exe, firefoxdriver.exe, etc. 
+Example: 
+WebDriverManager.chromedriver().setup();
+
+
+2. To create instance of the browser: (invoking the browser) 
+WebDriver driver = new ChromeDriver(); //to perform testing in chrome browser 
+WebDriver driver = new EdgeDriver(); //to perform testing in Edge browser
+
+
+3. WebDriver is a remote control interface that enables introspection and control of browser. 
+ChromeDriver, EdgeDriver, FirefoxDriver, etc. are classes in Selenium contains 
+methods which are used to automate respective browsers.
+
+ a) ChromeDriver driver = new ChromeDriver(); 
+In this the driver object has access to all the methods in ChromeDriver.
+
+ b) WebDriver driver = new ChromeDriver(); 
+In this the driver object has access to those methods of ChromeDriver which are 
+common in WebDriver interface
+
+
+---------------------------------------------------------------------------------------------
+Web driver methods  .  	get()   open the app
+			. getCurrentURL()  --- current url
+			. getTitle()		title of page
+			. getText()
+			. getTagName()
+			. getCSSValue()
+			. getAttribute(string name)
+			. quit()
+			. close()
+
+
+Browser Navigate methods  . driver.navigate().to(appUrl);    to back forward refresh
+			  . driver.navigate().back()
+			  . driver.navigate().forward() 
+			  . driver.navigate().refresh() 
+
+
+Web Elements methods    . findElement()
+			. sendKeys() - used to enter text in the web element
+			. submit() - used to submit a form
+			. click() - used to perform click on the web element
+			. clear() - used to clear entered text
+			. isEnabled()
+			. isDisplayed()
+			. isSelected()
+
+
+findElement(): This method uniquely finds a web element on the web page.
+Syntax :  WebElement elementName = driver.findElement(By.LocatorStrategy("LocatorValue"));
+
+
+findElements(): This method finds a list of web elements on the web page.
+Syntax: List<WebElement> elementName = driver.findElements(By.LocatorStrategy("LocatorValue"));
+
+
+findElement locators strategies	. id				By-- locator   By.Id
+				. name
+				. class name
+				. tag name
+				. CSS selector
+				. XPath
+				. linkText
+				. Partiallinktext
+
+driver.findElements(By.tagname("LocatorValue"));
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS Selector : A CSS selector is a pattern string that uses CSS to target specific HTML elements on a web page.
+		It can select elements by tags, class names, IDs, attribute values, and more with a simple syntax. CSS selectors are straightforward, making them a great tool for locating HTML nodes.  
+
+
+Tag and id ----- #id  				 eg:  #password
+Tag and class name				 eg:  .classname				
+Tag and attributes ----tagname[att=value] 	 eg: input[placeholder=password]
+
+contains(*)					input[id*=password]
+starts-with(^)					input[id^=user]
+end with($)  					input[id$=word]
+
+
+first-of-type     				#id>tagname:first-of-type
+last-of-type					tagname[class=day]>tagname:last-of-type
+nth-of-type					tag#id>tag:nth-of-type(6)
+		
+
+--------------------------------------------------------------------------------------------------------------------
+
+Xpath :  XPath is a query language that locates the element by. Navigating through the XML 
+document.
+
+
+	. Absolute xpath  - It contains the complete path from root element to desire element
+			    It is a direct way to find element 
+			    Single forward slash (/)
+		        eg:- /html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/input[1]
+
+	. Relative xpath  - It is simply like refrencing the element and go from particular location 
+			    not a complete path from root element, can start from middle of HTML DOM structure
+			    Double slash (//)
+			    so relative xpath is always preferred
+			eg:  //input[@placeholder="Username"]
+
+
+Syntax:    //tagname[@attribute='value']
+ 	
+//     		--  current node
+tagname 	-- tagname of particular node like input, div etc
+@		--  allows you to select attribute
+attribute 	-- select attribute like id , name, classname etc
+value		-- value of attribute
+
+
+eg:-  	//input[@name='password']
+      	//*[@id='login']
+	//input[@type='text']
+	//input[@class='username3241']
+	//a[@href='https://www.google.com']
+	//img[@src='../images/java.png']
+
+
+* methods:       basic xpath  -- //tagname[@attribute='value']
+		 contains     -- //tagname[contains(@attribute,'value')]
+		 text 	      -- //tagname[text()='value']
+		 starts-with  -- //tagname[starts-with(@attribute,'value')]
+		 or ,and      -- //tagname[@attribute='value' or @attribute='value']
+				 //tagname[@attribute='value' and @attribute='value']
+
+		contains     //*[contains(@placeholder,'Username')]
+		text         //h4[text()='Password for all users:']
+		starts-with  //input[starts-with(@type,'submit')]
+		OR	     //input[@type='text' or @id='user-name']
+		AND	     //input[@type='text' and @id='user-name']
+
+--------------------------------------------------------------------------------------------------------------------
+
+Axes:
+=====  
+XPath Axes in Selenium WebDriver used to locate a web element which is not having any attributes on it's own, can't locate it directly using any of the locator strategy which selenium WebDriver provides except XPath and very useful to locate dynamic XPath. In such cases we can use XPath Axes mechanism to locate based on other web elements present in the HTML Document. We can use any one or all of the XPath axes names/method to locate any web element on given web page.
+
+XPath Axes Names/Methods ========
+    
+1) Self -- Selects the current node
+2) Parent -- Selects the parent of the current node
+3) Child  --  Selects all children of the current node
+4) Ancestor  --Selects all ancestors (parent, grandparent, etc.) of the current node
+5) Descendant  --  Selects all descendants (children, grandchildren, etc.) of the current node
+6) Following-sibling  --  Selects all siblings after the current node
+7) Preceding-sibling -- Selects all siblings before the current node
+
+syntax: (Self/target)
+//tagname[@attribute='value']/Axes::tagname[0]
+//tagname[@attribute='value']/Axes::tagname/axes::tagname[0]
+
+examples:
+//div[@class='form_group']/descendant::input[1]
+//div[@class='form_group']/parent::form/child::div[1]
+//div[@class='form_group']/child::input[1]
+//div[@class="form_group"]/parent::form
+
+//div[@class="form_group"]/ancestor::div[@class="login_wrapper"]
+//div[@class="form_group"]/ancestor::div[4]
+
+//div[@class="form_group"]/child::input
+
+//div[@class="error-message-container"]/preceding-sibling::div
+//button[@class="primaryButton___2f7bf2 searchButtonWrapper___90670b"]/child::i/ancestor::div
+------------------------------------------------------------------------------------------------------------------------
+
+Xpath and Xpath Axes
+
+	* syntax   //tagname[@attribute='value']
+
+	* absolute and relative
+
+	* methods: contains 
+		 text 
+		 starts-with
+		 or ,and
+	* XPath axes methods
+		following,preceding,ancestor,parent,child,following-sibling,self,descendant
+--------------------------------------------------------------------------------------------------------
+Upload the File:
+
+1.     WebElement file = driver.findElement(By.cssSelector("input[type='file']"));
+    fileInput.sendKeys("C:\\path\\to\\your\\file.txt"); // Use absolute path
+---------------------------------------------------------------------------------------------------------------------
+CheckBoxes
+---------------------------------------------------------------------------------------------------------------------
+Radio Buttons
+-------------------------------------------------------------------------------------------------------------
+Drop Down       Select --- The Select Class in Selenium is a method used to implement the HTML SELECT tag. methods to select and deselect the elements. The Select class is an ordinary class so New keyword is used to create its object and it specifies the web element location.
+
+		selectByVisibleText()           single
+		deselectByVisibleText()		multiple option
+		selectByValue() 		single
+		deselectByValue()		multiple option
+		selectByIndex()			single
+		deselectByIndex()		multiple option
+	        isMultiple()       --  boolean  returns TRUE if the drop-down element allows multiple selection at a time; FALSE if otherwise
+		deselectAll()	-- Clears all selected entries. This is only valid when the drop-down element supports multiple selections.
+		getFirstSelectedOption()  -- This method returns the first selected option of the dropdown
+		getAllSelectedOption()    --  This method returns all the selected options of the dropdown
+		getOptions()		-- There are times when you need to get all the options in a dropdown or multi-select box. This is where you can use the getOptions() method of the Select class.
+
+
+-----------------------------------------------------------------------------------------------
+
+Actions  class	---  it is a built in feature provided by selenium for handling mouse and keyboard events
+			 build()   perform()
+	    	  with movetoElement & without , sendkeys()
+		
+	methods ----		single , double, right(context) ,sendkeys(), drag and drop
+
+
+	actions					webelement
+	
+	sendkeys()				sendkeys()
+
+	simulate the keyboard key		typing ther text into the text fields
+	by press and release
+
+	like tab,enter,down,up etc		like "username"
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Frames:- Frames are a now deprecated means of building a site layout from multiple documents on the same domain.
+		The frame enables a developer to split the screen horizontally or vertically by using the frameset tag.
+		An iframe is also known as an inline frame.
+		 An iframe tag is defined using <iframe></iframe> tags
+		
+
+Handle Frames   driver.switchTo().frame();  ---  by index,id&name ,parent , frame element
+<iframe>
+
+drivedr.switchTO().Frame(index)
+drivedr.switchTO().Frame(name & id)
+drivedr.switchTO().Frame(WebElement)
+drivedr.switchTO().parentFrame(), defaultContent()
+
+. switchTo()  --  helps to switch between the Frames
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+wait Synchronization:
+====================
+wait Synchronization  --  --  coordination process between the components is termed Synchronisation.
+		      -- Synchronisationin Selenium executes the code and applications, which must be in 			synchronisation to perform the operation.
+		     --  wait command in selenium direct test script to pause for certain time before throwing "ElementNotVisibleException" ,  NoSuchElementException , InvalidSelectorException , TimeoutExcetion
+
+-->  Types of Synchronisations in Selenium:
+=========================================== 
+   a)  Conditional Synchronisation 
+   b)  Unconditional Synchronisation 
+
+
+a) Conditional Synchronisation:
+============================== 
+In this type of Synchronisation, an error can be overthrown as we can specify timeout duration along with some desired conditions. Conditional Synchronisation, also known as Dynamic wait divided into three types -  
+
+a) Implicit wait 
+
+b) Explicit wait ( Webdriver wait) 
+
+c) PageLoadTimeout  
+
+d) Fluent wait 
+
+================================
+   1. Implicit wait -- 
+
+dynamic wait , global ( tells the web driver to wait for certain amount of time before it throws exception as noSuchElement exception found ,  it will wait till maximum of the seconds given   
+--  driver.manage().timeouts().implicitWait(duration.ofSeconds(4));
+
+-	When finding the element in any webpage selenium doesn't wait for any time, so if the element is not available immediatiely then selenium webdriver will throw the exception i.e: NoSuchElementException 
+	For eg: element A takes 0sec to find and element B takes 2sec to find
+- You can allow the selenium webdriver to wait for some time to find the element using Implicit Wait Timeout.
+====================================
+
+   2. Explicit wait(WebDriver wait) -- 
+
+dynamic , applicable to particular webelement like button,textbox & if the elements taking bit time to load then we can specify explicit to those element to appear first then proceed
+- Explicit wait is applied for specific elements on page which take more time load or appear.
+
+-	The Explicit Wait in Selenium is used to tell the Web Driver to wait for certain conditions (Expected Conditions) or 	maximum time exceeded before throwing “ElementNotVisibleException” exception. It is an intelligent kind of wait, but it can be applied only for specified elements.
+
+-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds());
+		wait.until(ExpectedConditions)
+-    define “WebDriverWait” class on the webpage until the “ExpectedConditions” are met .
+======================================
+
+   3. Fluent wait -- 
+
+dynamic ,we can specify polling frequency (if element take long time but u want it to be checked by small interval of time i.e polling ), specify exculsion of the exception that can happen , similar to explicit wait
+
+- The Fluent Wait in Selenium is used to define maximum time for the web driver to wait for a condition, as well as the frequency with which we want to check the condition before throwing an “ElementNotVisibleException” exception. It checks for the web element at regular intervals until the object is found or timeout happens.
+
+- Frequency: Setting up a repeat cycle with the time frame to verify/check the condition at the regular interval of time
+
+-	Wait<WebDriver> wait = new FluentWait<WebDriver>(WebDriver reference)
+	.withTimeout(Duration.ofSeconds())
+	.pollingEvery(Duration.ofSeconds())
+	.withMessage("")
+	.ignoring(Exception.class);
+
+	wait.until(ExpectedConditions)   
+========================================
+
+b) Unconditional Synchronisation :
+This Unconditional Synchronisation of Selenium with Java specifies just the timeout limit. It pauses the code for a specified time, and then it executes the following line of code. This Synchronisation is not preferred for automation as it waits for the specified time though the web element is found.
+   
+. sleep() -- Static wait , it stop the script,
+Thread.Sleep is a static wait and it is not a good way to use in scripts as it is sleep without condition.
+
+-------------------------------------------------------------------------------------------------------
+
+Robots  --- users need control over keyboard or mouse to interact with OS windows like download pop-ups, print pop-ups, etc. and native applications like notepad, calculator, etc. It is generally used to simulate real-time keyboard and mouse operations which we do manually.
+
+mouseMove(int x, int y): Method to move the mouse pointer to the given screen coordinate
+mousePress(int buttons): Method to press one or more mouse buttons
+mouseRelease(int buttons): Method to release one or more mouse buttons
+
+InputEvent.BUTTON1_DOWN_MASK :  For mouse left -click
+InputEvent.BUTTON2_DOWN_MASK : For mouse middle button click.
+InputEvent.BUTTON3_DOWN_MASK : For mouse right-click
+
+keyPress(): Ex: robot.keyPress(KeyEvent.VK_DOWN) : This method with press down arrow key of Keyboard
+keyRelease() : Ex: robot.keyRelease(KeyEvent.VK_DOWN) : This method with release down arrow key of Keyboard
+To press down arrow key of Keyboard we use (robot.keyPress(KeyEvent.VK_DOWN))
+To press TAB key of keyboard (we use robot.keyPress(KeyEvent.VK_TAB))
+To press Enter key we use (robot.keyPress(KeyEvent.VK_ENTER)).
+To press ctrl+A , ctrl+C , ctrl+V   robot.keyPress(KeyEvent.VK_CONTROL),robot.keyPress(KeyEvent.VK_A)
+
+--------------------------------------------------------------------------------------------------------
+
+
+Web Alerts ( handle web alerts,pop ups,dialog)
+	    Simple Alert, Prompt Alert, Confirmation Alert
+ methods       . dismiss() 
+	       . accept()	
+	       . getText()  --  capture the text
+	       . sendKeys(String stringToSend) 
+
+Syntax   driver.switchTo().alert().method name();
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Handling multiple windows  --  It is a unique identifier that holds the address of all the windows .(as a pointer to a window) . so each browser has a unique window handle.
+
+
+	. getWindowHandle() -- This method helps to get the window handle of the current window ,returns string ,we get unique ID of the current window (identified within driver instance.)
+	. getWindowHandles() -- this method helps to get the handles of all the windows opened,stores in set of string type,to handle all opened windows,transition from 1 window to another
+	. switchTo()  --  helps to switch between the windows
+	. set -- this method helps to set the window handles in the form of string.  set<String>(returns the set of handles)
+
+	. newWindow 	driver.switchTo().newWindow(WindowType.TAB);			        driver.switchTo().newWindow(WindowType.WINDOW);
+
+
+
+--------------------------------------------------------------------------------------------------------
+Javascript executor  : -- I
+		-- It is an interface which provides mechanism to execute javascript through selenium driver .
+		-- javascript is a programming language that interacts with HTML in a browser, & to use this function in selenium javaScriptExecutor is required
+
+* Two methods
+1. ExecuteScript : execute javascript in the currently selected window or frame.
+2. ExecuteAsyncScript : execute asynchronous javascript in the current window or frame.
+
+
+* STEPS :	
+	1. Import the package -- Import org.openqa.selenium.JavascriptExecutor;
+	2. Create a reference -- JavascriptExecutor js = (JavascriptExecutor) driver;
+	3. Call the JavascriptExecutor method -- js.executeScript(script, args);
+
+	JavaScriptExecutor js=(JavaScriptExecutor)driver;
+	refresh  -- js.executeScript("location.reload()");
+	ScrollBy(H,V)  --- js.executeScript("window.scrollBy(0,450)");
+	setAttribute    give the value
+	getAttribute	fetch and print it in console
+	click()       
+js.executeScript("argument[0])
+ a b
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+Screenshots  ---I     TakesScreenshot         	getScreenShotAs() -- method
+dependency -- apache common IO
+
+A Screenshot in Selenium Webdriver is used for bug analysis.If users need to capture a screenshot , they need to use the TakeScreenshot method which notifies the WebDrive to take the screenshot and store it in Selenium.
+
+1) Convert web driver object to TakeScreenshot
+TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+
+2) Call getScreenshotAs method to create image file
+File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+
+3) Copy file to Desired Location
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+Framework:-	It is a method of separating data sets from the test cases.
+. Data Driven (write and read excel files) (requires Apache POI)
+
+. It is used to drive test cases and suites from an external data feed. The data feed can be data sheets like xls, xlsx, and csv files. A Data Driven Framework in Selenium is a technique of separating the “data set” from the actual “test case” (code).
+
+java  -- jars of apache POI (build path)
+maven -- dependency  
+
+2 versions
+ old -- xls  - HSSF (components) , dependency apache poi  (Horrible spread sheet format)
+ new -- xlsx - XSSF (components) , dependency apache poi+poi-ooxml  (xml spread sheet format)
+
+FileInputStream / FileoutputStream -- C
+Workbook -- I		HSSFWorkbook		XSSFWorkbook
+Sheet  -- I
+Row  -- I
+Cell  -- I
+
+createSheet()
+createRow()
+createCell()
+setCellValue()
+
+getSheet() :-		1. by index   			2. by sheet name
+getRow() 
+getCell() :- Get the cell representing a given column 
+
+getStringCellValue() , getNumericCellValue() , getBooleanCellValue()
+
+getPhysicalNumberOfRows() :- Gets the number of defined rows(total no. of rows)
+getPhysicalNumberOfCells() :- Gets the number of defined cells (NOT number of cells in the actual row!)(total no. of columns)
+getFirstCellNum() :- Get the number of the first cell contained in this row.(col count starts from 0)
+getFirstRowNum() :- (row count starts from 0)
+getLastRowNum() :-  (row count starts from 0) gives you last row number
+getLastCellNum():- actual count of column in given row (sheet.getRow(2).getLastcellNum();)
+	     
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+https://testng.org/testng-eclipse-update-site/
+
+TDD Test Driven Development (unit Testing)- focuses on creating Test cases unit testing
+
+1.) TestNG :- TestNG is a testing framework that is capable of making Selenium tests easier to understand and of generating reports that are easy to understand.
+
+TestNG is an automation testing framework in which NG stands for “Next Generation”. TestNG is inspired by JUnit which uses the annotations (@). TestNG overcomes the disadvantages of JUnit and is designed to make end-to-end testing easy.
+Using TestNG, you can generate a proper report, and you can easily come to know how many test cases are passed, failed, and skipped. You can execute the failed test cases separately.	
+
+TestNG Annotations are used to control the next method to be executed in the test script. TestNG annotations are defined before every method in the test code.
+
+2.) advantages of TestNG over JUnit:
+
+-- Annotations are easier to understand
+-- Test cases can be grouped more easily
+-- Parallel testing is possible
+-- TestNG is capable of generating HTML-based reports.
+-- Annotations can use parameters
+-- TestNG Dataprovider is a way to pass parameters into the test function which passes different values in test cases in a single execution.
+
+3.) steps
+-- install TestNG from Eclipse workspace
+-- Install jar files for java & dependency in maven project
+
+3.)  @Test  -- Run All  & Run|Debug
+
+testng xml --- is a config file , what we want to execute and which order we want to execute , how many times 
+
+4.)  Asserts --it is static class, It's a class file provided by TestNG
+  Assertion -- 
+
+Assert in Selenium WebDriver is used for verifying or validating the scenario under test. Based on the result of the Assert, the outcome (i.e. pass/fail) of the test can be decided. A test scenario is considered as passed if the ‘achieved test result’ matches with the ‘expected test result’.
+
+5)  types  :-  hard &  soft
+	hard -- means assert
+	soft --  assertAll() to throw exception
+
+*  Assert in Selenium WebDriver are Hard Asserts By Default
+*  Assert ( Hard Assert) == . test execution is halted when the condition as part of the assert is not met. 
+.Hard asserts usually throw an Assertion Error (i.e. java.lang.AssertionError) and the test scenario is marked as failed as soon as the hard assert condition fails. The Assertion Error should be handled in the try..catch block in Java.
+
+*  Soft Assert == soft asserts do not throw any exception on the failure of the assert and continue to the next step even after encountering an assert.
+. Soft assert collects all the asserts encountered when running the @Test methods. The assertAll() method is called to throw all the exceptions caught during the process of Selenium test automation execution. Soft Asserts are not included by default in the TestNG framework. You have to include the package 	org.testng.asserts.Softassert when soft assert has to be used in the tests.
+. Once the assert statement fails, the current test is skipped and the test suite continues with the next @Test
+
+methods :
+assertEquals
+assertNotEquals
+assertTrue	(antwhere u r getting boolean values from websites u can check those by this methods)
+assertFalse
+assertNull   (for object  , as obj created or other obj to check they are null or not)
+assertNotNull
+aasertSame
+
+
+.Annotations :- (@) Annotations in TestNG are lines of code that can control how the method below them will be executed.
+
+@BeforeSuite
+@AfterSuite
+@BeforeClass
+@AfterClass
+@BeforeMethod
+@AfterMethod
+@BeforeTest
+@AfterTest
+@BeforeGroup
+@AfterGroup
+
+
+. @Test:  TestCases and Main method
+
+. @BeforeMethod: This will be executed before every @test annotated method.
+
+. @AfterMethod: This will be executed after every @test annotated method.
+
+. @BeforeClass: This will be executed before first @Test method execution. It will be executed one only time throughout the   	test case.
+
+. @AfterClass: This will be executed after all test methods in the current class have been run
+
+. @BeforeTest: This will be executed before the first @Test annotated method. It can be executed multiple times before the   		test case.
+
+. @AfterTest: A method with this annotation will be executed when all @Test annotated methods complete the execution of those   classes inside the <test> tag in the TestNG.xml file.
+
+. @BeforeSuite: It will run only once, before all tests in the suite are executed.
+
+. @AfterSuite: A method with this annotation will run once after the execution of all tests in the suite is complete.
+
+. @BeforeGroups: This method will run before the first test run of that specific group.
+
+. @AfterGroups: This method will run after all test methods of that group complete their execution.
+
+==============
+. priority: (priority = 1) or (priority = -1)
+	we can pass priority to the particular testcases
+	we can pass negative & positive values
+	It will execute based on the ascending order
+	If we give same priority then it will execute based on the alphabetic order.
+================
+
+. discription = @Test(priority = 1,description = "this is test1")
+		to pass the description for the test 
+
+================
+. Ignoring the testcases: (enabled = false)
+	for ignoring the testcases , we can use one method called enabled
+	when the enabled = false , It will skip the particular testcases
+
+================
+. Invocation count: (invocationCount = 2)
+	If u want run the particular testcases for n number of times , we can use one method called innvocation class
+	It will run the testcases for that particular times
+
+=================
+
+. depends on method: dependsOnMethods is an attribute of the @Test annotation used to define a dependency between test methods. It ensures that a test method is executed only after the methods it depends on have been successfully executed. If a dependent method fails, the methods relying on it will be skipped rather than marked as failed 
+=================
+. timeout : The maximum time a test execution should take. If exceeded, the test fails automatically. (timeOut = 6000)
+===================
+
+. expectedExceptions:-
+expectedExceptions = NoSuchElementException.class
+expectedExceptions Is very good feature of testng using which we can Ignore known but not required exceptions. In your selenium webdriver test execution, You can use expectedExceptions when you know that any specific @Test method can throw specific exception but It Is not much more Important and you wants to Ignore that exception.
+
+If you have used expectedExceptions attribute with @Test method then Whenever Exceptions thrown In @Test method, It will compare It with expectedExceptions attribute's value. If both match then It will be handled by TestNG. That means your @Test method will be pass and remaining part of that method will be skipped.
+=========================
+
+@dataProvider:
+	To pass the different data's for same test case
+	return type of data provider is 2 dimensional array
+	if you want to access the data provider outside the class mention the data provider as static.
+
+===============
+. @parameters: 
+	-- when you want to pass the input from XML
+	-- @parameters annotation needs to be used
+===============
+-- @optional 
+In this annotation, if the defined parameter is not found in the testng.xml file, Then Test method will receive the default value from the @Optional annotation. When parameters name is not matched, then we give @optional. you have to pass the value at the time of initialization  , public void log(@Optional("name")String username)
+
+-- If both @parameters and @optional are used , where parameters name is matched , then preference will be given to 	parameter value
+================
+
+. Groups(define) : TestNG Groups allow you to perform groupings of different test methods. Grouping of test methods is required when you want to access the test methods of different classes.
+Exclude Tag:  Syntax for exclude tag <exclude name="${TEST_CASE_NAME}" />
+Include Tag:  Syntax for include tag <include name="${TEST_CASE_NAME}" />
+define
+run
+
+=================
+	
+Parallel: Parallel testing or parallel execution, as the name suggests, is a process of running the test case parallelly rather than one after the other.   In parallel testing, the program's multiple parts (or modules) execute together, saving the testers a lot of time and effort. (Fails On Dependent Modules)Parallel testing allows independent running of modules simultaneously. 
+parallel= ""  
+. Methods: This will run the parallel tests on all @Test methods in TestNG.
+. Tests: All the test cases present inside the <test> tag will run with this value.
+. Classes: All the test cases present inside the classes that exist in the XML will run in parallel.
+
+Thread count is basically a number of instances running to execute multiple tests simultaneously or in parallel. The attribute thread-count allows the user to specify how many threads should be run for this execution.
+
+--Thread.currentThread().getId()
+parallel="tests" thread-count="2"
+
+-- threadPoolSize: The number of threads we would like to create and run the test parallelly.
+==========================
+Cross-browser testing : it is the process of testing our website on different browsers and operating systems. With cross-browser testing, we make sure that the site is rendered the same in every browser. We can perform cross-browser testing either manually or in an automated way, but the manual method is very tedious. The reason being that while performing cross-browser testing, we do not only care about the browsers but their different versions and the operating systems too.
+
+Cross-browser testing using TestNG ensure a better performance on different browsers and OS.
+================================		
+
+Working of TestNG Annotations :-
+1. Launching the browser will be the first step and hence it is included under the @BeforeTest Annotation.
+2. Next is the actual test case which verifies the title, and is therefore included in the @Test annotation.
+3. Finally, the quit browser test case is considered under the @AfterTest annotation.
+
+
+-----------------------------------------------------------------------------------------------------------------
+================================================================================================================
+Exceptions:-
+WebDriver Exceptions in Selenium:
+There are many exceptions occurs while using Selenium tool. Here we will discuss most common exceptions.
+
+I have divided the exceptions in different category.
+
+Not Found exception:
+=====================
+NoSuchWindowException: Webdriver trying to switch on an invalid window.
+
+NoSuchFrameException: WebDriver trying to switch to an invalid frame.
+
+NoSuchElementException: If we have given wrong locator or element is not present is DOM.
+
+NoAlertPresentException: WebDriver trying to switch to an invalid alert.
+
+TimeOutException: When the selenium takes longer time than the given wait time then it throws TimeOutException.
+
+StaleElementReferenceException: If element is no longer present in the DOM due to page got refreshed or a frame/window switched or navigate to another page.
+
+
+
+InvalidElementState Exception:
+==============================
+ElementNotVisibleException: If element is present but visibility is off or If synchronization issue between Selenium and web application or if we have used duplicate xpath then this exception is thrown.
+
+ElementNotSelectableException:  if an element is disable (element is not clicked/selected) .
+
+
+
+java.lang.illegalargumentexception in selenium
+==============================================
+In Selenium, when we have given null or string length is zero in sendKeys() method the n it throw this exception.
+
+
+
+Element not visible exception is thrown when:
+==============================================
+
+There are many reasons which are mentioned below.
+
+1. If we try to locate a web element which is not visible or hidden on screen then we will get the element not visible exception.
+2. Synchronization problem: If Selenium is faster than application or vice versa.
+3. If we have used duplicate xpath in our script means more than one web element have same xpath.
+4. Sometimes weblement is not on the visible area of the screen (means when we scrolled down the screen then element is visible)
+
+--> how to solve such exceptions
+Solution 1: synchroniztion
+Solution 2: Always use the unique path that matches only a single element.
+Solution 3: We can use try.. catch block to handle this exception.
+---------------------------
+1. Solution 1: synchroniztion
+
+-- For 1st and 2nd above problem means when element will visible then we will perform operations.
+-- Here we can wait until the element is not visible. Once it will visible then we can perform an action.
+
+-- Here we can different wait commands.
+
+*) Thead.sleep(): It is not recommended because we never know in how much time the element will visible on the screen. It might be increasing our test execution.		Thread.sleep(30);
+*) Implicit wait: It is also not recommended because it will apply whole line of code in the given test script which increase the execution time.		driver.manage().timeouts().implicitlywait(20, TimeUnit.SECONDS);
+*) Explicit wait: It is recommended because it provides different expected conditions which we can use till we want to wait.
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(“Locator”)));
+
+------------------------------
+In case of element is not in visibility area of the screen then first we need to scroll the web page using javaScriptExecutor then perform an action.
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("arguments[0].scrollIntoView(true);", element);
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+Parameterization –  MS Excel, Properties, DataProvider
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+Object Repository : An Object Repository is a map between UI element and its locator. Which can also be written as an Object Map between UI element and the way to find it. In Selenium WebDriver's context it means a Mapping between WebElement and the corresponding locator type and value. create property file by(.properties)
+
+login.username.xpath=.//*[@id='user-name']
+login.password.xpath=.//input[@id='password']
+login.Signup.xpath=.//input[@id='login-button']
+
+--------------------------------------------------------------------------------------------------------------------
+
+Page Object Model :-Page Object Model (POM) is a design pattern, popularly used in test automation that creates Object Repository for web UI elements. The advantage of the model is that it reduces code duplication and improves test maintenance. For each web page in the application, there should be a corresponding Page Class. This Page class will identify the WebElements of that web page and also contains Page methods which perform operations on those WebElements.	
+
+By is used to locate the elements
+By username = By.Id()
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Page Factory : Page Factory is a class provided by Selenium WebDriver to implement the Page Object Model.
+
+-- @FindBy is used to mark a field on a page object to locate the element. using different locators strategies. Additionally, it helps in quickly locating the web elements using one search criteria.
+
+--how -- is another way to locate the elements
+-- @FindBys & @FindAll.
+
+First, by specifying both 'How' and 'Using'
+@FindBy(how = How.ID, using = "userName")
+WebElement username;
+
+Second, by directly using locator(id, XPath, CSS, etc.)  
+@FindBy(id="userName")
+WebElement username;
+
+--@CacheLookUp : using @CacheLookUp, we can store the web elements in cache memory right after reading for the first time. It fastens our execution and the code, need not look up for the element on the web page and directly references it from memory.
+--------------------------------------------------------------------------------------------------------------=======
+
+
+			POM					PageFactory
+1.	It is an approach for Design patterns.		It is a class that is provided by Selenium Webdriver.
+2.	It is not an optimal method to process tasks.	It is an optimal method to process tasks.
+3.	It helps in separating page objects and scripts.It is a technique to implement POM.
+4.	‘By’ annotation is used to define page objects.	It uses annotation ‘FindBy’ to describe page objects.
+5.	It does not handle exceptions efficiently.	It efficiently handles the exceptions.
+6.	It requires the initialization of every object.	It does not require the initialization of every object.
+7.	There is cache storage for performing tasks.	There is no need for cache storage.
+
+===================================================================
+
+
+ChromeOptions/EdgeOptions: 
+ChromeOptions allows for customizing the ChromeDriver session by modifying browser properties, such as enabling headless mode, adding extensions, or blocking pop-ups. It's used to optimize test execution and handle browser behavior during automation
+
+
+
+============================================================================
+*What are extent reports?
+Extent Reports is an open-source reporting library used with test automation tools. 
+It can be integrated with testing frameworks like JUnit and TestNG. Extend Reports generates 
+HTML documents that serve as interactive and detailed test execution reports. 
+It provides reports that can depict results as pie charts along with features such as 
+logging and screenshots. Moreover, TestNG provides a report by default, but they are 
+generally less detailed. Additionally, while TestNG provides default reports, they lack the 
+level of detail and interactivity that Extent Reports offer, such as graphical representations,
+logs, and screenshots.
+
+Extent Report = Extent Reports are one of the best built-in ways to generate customizable HTML reports with a pleasing user interface in Selenium web driver. It is an open source library that can be easily configured with Selenium, thereby making it the best choice for automation testers.
+================================================================================
+
+BDD Framework --> Cucumber
+==========================
+
+Cucumber Framework in Selenium is an open-source testing framework that supports Behavior Driven Development for automation testing of web applications. The tests are first written in a simple scenario form that describes the expected behavior of the system from the user’s perspective.
+
+It explains the behavior of the application in a simple English text using Gherkin language.
+
+Cucumber BDD framework mainly consists of three major parts – Feature File, Step Definitions, and the Test Runner File.
+
+1. Feature File:
+================
+--This is a file where you will describe your tests in Descriptive language (Like English).
+--A feature file can contain a scenario or can contain many scenarios
+
+2. Step Definitions:
+====================
+--A Step Definition is a small piece of code with a pattern attached to it or in other words a Step Definition is a java method in a class with an annotation
+--An annotation followed by the pattern is used to link the Step Definition to all the matching Steps, and the code is what Cucumber will execute when it sees a Gherkin Step. Cucumber finds the Step Definition file with the help of the Glue code in Cucumber Options
+
+3. Runner File:
+=============== 
+JUnit Test Runner Class
+Create a new Class file in the ‘cucumberTest‘ package and name it as ‘TestRunner‘, by right click on the Package and select New > Class. This class just needs annotations to understand that cucumber features would be run through it and you can specify feature files to be picked up plus the steps package location. There are bunch of other parameters that it can take, to be discussed later in Cucumber Options.
+Import Statements
+First import statement 'org.junit.runner.RunWith' imports @RunWith annotation from the Junit class. @RunWith annotation tells JUnit that tests should run using Cucumber class present in 'Cucumber.api.junit' package.
+
+Second import statement 'cucumber.api.CucumberOptions' imports the @CucumberOptions annotation. This annotation tells Cucumber a lot of things like where to look for feature files, what reporting system to use and some other things also. But as of now in the above test, we have just told it for the Feature file folder.
+
+@RunWith = It more like a starting point for Junit to start executing your tests.
+@CucumberOptions are like property files or settings for your test. Basically @CucumberOptions enables us to do all the things that we could have done if we have used cucumber command line. This is very helpful and of utmost importance, if we are using IDE such eclipse only to execute our project. 
+
+=======================
+
+
+TestRunner File is used to build a Communication between Feature Files and StepDefinition Files. 
+
+features: We use Cucumber features option to define path of feature file(s). 
+
+glue: We use Cucumber glue option to define path of step definition file(s). 
+
+format: We use Cucumber format option to generate output or test results in different types of formats. 
+Eg: HTML Report, JUnit or TestNG Report, Cucumber Report and So. 
+
+monochrome: We use Cucumber monochrome option to print console output in a very readable format. 
+monochrome must be set to true in order to achieve it. 
+
+dryRun: We use Cucumber dryRun option to check whether all the steps from feature files has got methods and implemented or no in Step Definition File. 
+Before execution of program dryRun must be set to true and we need to make sure that all steps are implemented in Step Definition File. 
+Once we are sure that all steps are implemented then dryRun must be set to False and we should continue with Test Execution.
+
+tags: We use Cucumber tags option when we have more number of scenarios in a single feature file which represents different purpose [Smoke, Sanity, Regression etc] in such cases we can make use tags option.
+Eg: tags={ ” @ Smoke ” } >> It will pick only and only those scenarios which are tagged with Smoke in feature files.
+
+Plugin: plugin Option is used to specify different formatting options for the output reports. Various options that can be used as for-matters are:
+Note – Format option is deprecated . Use Plugin in place of that.
+
+A- Pretty: Prints the Gherkin source with additional colors and stack traces for errors.
+
+DryRun: This option can either set as true or false (default value is false). If it is set as true, it means that Cucumber will only checks that every Step mentioned in the Feature File have corresponding code written in Step Definition file or not. So in case any of the function is missed in the Step Definition for any Step in Feature File, it will give us the message. So If you writing scenarios first and then implementing step definitions then add dryRun = true.
+
+Monochrome: This option can either set as true or false (default value is false). If it is set as true, it means that the console output for the Cucumber test are much more readable. And if it is set as false, then the console output is not as readable as it should be. For practice just add the code ‘monochrome = true‘ in TestRunner class.
+
+Features: Features Options helps Cucumber to locate the Feature file in the project folder structure.All we need to do is to specify the folder path and Cucumber will automatically find all the ‘.features‘ extension files in the folder.
+
+Glue: It is almost the same think as Features Option but the only difference is that it helps Cucumber to locate theStep Definition file. Whenever Cucumber encounters a Step, it looks for a Step Definition inside all the files present in the folder mentioned in Glue Option.
+
+===================================
+
+
+
+
+captcha   pay back   manually (if it is text to enter then use scanner class)
+
+=========================================
+TDD & BDD
+
+
+
+
+dependencies:- junit ,  selenium java  , cucumber java  ,  cucumber junit
+
+eclipse marketplace:-
+1 cucumber eclipse installation
+2  Natural
+
+if natural not shown in eclipse marketpalce goto new  s/w install  in help
+http://rlogiacco.github.io/Natural --- for natural installatiom
+ 
+
+TDD 			test driven development   test FIRST development
+framework 	  TestNG
+LEVELS         ATDD  &  DeveloperTDD
+			BDD			TDD
+
+BDD 	behaviour driven development
+framework 	Cucumber
+
+Feature: Summary
+
+Background: Defies steps that are common to all the tests in the feature file
+ 
+Scenario -- Title
+
+GIVEN ---  Preconditions
+
+WHEN  ---  Event / Actions (WHEN , AND )
+
+And --- Add conditions to your tab
+
+But --- Add negative type comments
+
+THEN ---  Results / Expected Output of Actions
+
+---------------
+
+1.  Feature
+
+2.  Step definition -- 1 pages , 2  java
+
+3.  Runner
+-------------------
+
+@Login
+Feature: Login Features
+ 
+Background:
+Given user is on login page
+ 
+@Positive
+Scenario: positive loginscenario
+When user enter "mercy@cg.com"
+But user enter invalid email
+And user clicks button
+Then user is on register page
+ 
+@Negative
+Scenario Outline: negative Login scenario
+When user enter "<mailid>"
+And user clicks the button
+Then user is on same page
+ 
+Examples:
+|mailid|
+|mercy@cg.com|
+|mercy|
+
+
+==============================================================================================
+
+
+Listener is defined as interface that modifies the default TestNG’s behavior. As the name suggests Listeners “listen” to the event defined in the selenium script and behave accordingly. It is used in selenium by implementing Listeners Interface. It allows customizing TestNG reports or logs. There are many types of TestNG listeners available.
+
+There are many types of listeners which allows you to change the TestNG’s behavior.
+
+Below are the few TestNG listeners:
+
+IAnnotationTransformer ,
+IAnnotationTransformer2 ,
+IConfigurable ,
+IConfigurationListener ,
+IExecutionListener,
+IHookable ,
+IInvokedMethodListener ,
+IInvokedMethodListener2 ,
+IMethodInterceptor ,
+IReporter, - generate report
+ISuiteListener, - suite
+ITestListener - methods
+
+-- The ITestResult interface represents the result of a test.
+
+========================
+
+-- IRetryAnalyzer --  implement IRetryAnalyzer in TestNG for retrying failed tests 
+
+1) Known failures - script
+2) unknown failures - xml
+
+=========================
+-- IAnnotationTransformer to override the content of the annotations.
+
+--IAnnotationTransformer transforms the TestNG annotations at run time.
+--IAnnotationTransformer has only one method named transform() that accepts four parameters:
+
+ITestAnnotation annotation
+Class testClass
+Constructor testConstructor
+Method testMethod
+
+==============================
+--  IExecutionListener
+it monitors the beginning and end of TestNG execution.
+
+onExecutionStart() – invoked before TestNG starts executing the suites
+onExecutionFinish() – invoked after all TestNG suites have finished execution
+
+=============================
+
+-- IInvokedMethodListener: This listener gets invoked before and after a method in TestNG.
+
+beforeInvocation(): this method gets invoked before every method
+afterInvocation(): this method gets invoked after every method
+
+===========================
+-- IMethodInterceptor
+This listener helps to alter the methods that TestNG is supposed to run. It gets invoked just before TestNG invokes the methods.
+
+==========================
+-- IReporter
+This listener helps to generate custom reports in TestNG based on desired conditions. It contains a method called generateReport() which is invoked when all suites of TestNG are executed
+
+==========================
+
+-- ISuiteListener
+It listens and runs before the start and end of suite execution. It contains two methods:
+
+onStart: invoked before test suite execution starts
+onFinish: invoked after test suite execution finishes.
+============================
+
+-- ITestListener
+This is the most frequently used TestNG listener. ITestListener is an interface implemented in the class, and that class overrides the ITestListener-defined methods. The ITestListener listens to the desired events and executes the methods accordingly.
+
+It contains the following ways:
+
+onStart(): invoked after test class is instantiated and before execution of any testNG method.
+onTestSuccess(): invoked on the success of a test
+onTestFailure(): invoked on the failure of a test
+onTestSkipped(): invoked when a test is skipped
+onTestFailedButWithinSuccessPercentage(): invoked whenever a method fails but within the defined success percentage
+onFinish(): invoked after all tests of a class are executedThe above-mentioned methods use the parameters ITestContext and ITestResult. The ITestContext is a class that contains information about the test run. The ITestResult is an interface that defines the result of the test.
+
+======================================================================================================
+
+

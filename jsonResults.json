@@ -1,0 +1,142 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\hardik\\Playwright\\Playwright_Training_JS\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "19",
+      "--grep",
+      "GET request"
+    ],
+    "configFile": "C:\\Users\\hardik\\Playwright\\Playwright_Training_JS\\playwright.config.js",
+    "rootDir": "C:/Users/hardik/Playwright/Playwright_Training_JS/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/hardik/Playwright/Playwright_Training_JS/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/hardik/Playwright/Playwright_Training_JS/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "junitResults.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonResults.json"
+        }
+      ],
+      [
+        "C:\\Users\\hardik\\Playwright\\Playwright_Training_JS\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "outputFolder": "myAllureResults"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "19APItesting.spec.js",
+      "file": "19APItesting.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "GET request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 627,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[object Object]\n200\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:22:11.402Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "173714b0b07eaf9acec5-64c90ca352b904b20681",
+          "file": "19APItesting.spec.js",
+          "line": 14,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-05T09:22:10.615Z",
+    "duration": 1540.616,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
